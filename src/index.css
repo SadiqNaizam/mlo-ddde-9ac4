@@ -3,90 +3,94 @@
 @tailwind utilities;
 
 @layer base {
+  /* 
+    Make sure to import 'Playfair Display' and 'Lato' in your main HTML 
+    or a global setup file for the custom fonts to work.
+  */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 60 56% 92%; /* Warm Cream */
+    --foreground: 21 35% 19%; /* Dark Brown */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 60 56% 95%; /* Lighter Cream */
+    --card-foreground: 21 35% 19%; /* Dark Brown */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 60 56% 95%; /* Lighter Cream */
+    --popover-foreground: 21 35% 19%; /* Dark Brown */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 57% 38%; /* Rich Leather */
+    --primary-foreground: 40 33% 98%; /* Off-white */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 18 33% 27%; /* Deep Wood */
+    --secondary-foreground: 40 33% 98%; /* Off-white */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 60 26% 86%; /* Muted Cream */
+    --muted-foreground: 21 35% 30%; /* Lighter Brown */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 41 33% 57%; /* Muted Gold */
+    --accent-foreground: 21 35% 19%; /* Dark Brown */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 50% 45%;
+    --destructive-foreground: 40 33% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 60 26% 82%;
+    --input: 60 26% 82%;
+    --ring: 41 33% 57%; /* Muted Gold for focus */
 
-    --radius: 0.5rem;
+    --radius: 0.25rem; /* 4px */
 
-    --sidebar-background: 0 0% 98%;
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar to match the scholarly theme */
+    --sidebar-background: 18 33% 20%;
+    --sidebar-foreground: 60 56% 92%;
+    --sidebar-primary: 25 57% 38%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 41 33% 57%;
+    --sidebar-accent-foreground: 21 35% 19%;
+    --sidebar-border: 18 33% 25%;
+    --sidebar-ring: 41 33% 57%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 21 35% 10%; /* Very Dark Brown */
+    --foreground: 60 26% 82%; /* Muted Cream */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 21 35% 12%;
+    --card-foreground: 60 26% 82%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 21 35% 12%;
+    --popover-foreground: 60 26% 82%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 25 57% 48%; /* Brighter Leather */
+    --primary-foreground: 21 35% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 18 33% 27%; /* Deep Wood */
+    --secondary-foreground: 60 26% 82%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 21 35% 17%;
+    --muted-foreground: 60 26% 75%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 41 33% 57%; /* Muted Gold */
+    --accent-foreground: 21 35% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 40 33% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 21 35% 17%;
+    --input: 21 35% 17%;
+    --ring: 41 33% 67%; /* Brighter Gold */
+
+    /* Sidebar Dark Theme */
+    --sidebar-background: 21 35% 8%;
+    --sidebar-foreground: 60 26% 82%;
+    --sidebar-primary: 25 57% 48%;
+    --sidebar-primary-foreground: 21 35% 8%;
+    --sidebar-accent: 41 33% 57%;
+    --sidebar-accent-foreground: 60 26% 82%;
+    --sidebar-border: 21 35% 12%;
+    --sidebar-ring: 41 33% 67%;
   }
 }
 
@@ -96,6 +100,15 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body; /* Apply body font by default */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading; /* Apply heading font to heading elements */
   }
 }
